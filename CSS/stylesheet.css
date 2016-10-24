@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: url(http://www.kompass.de/wp-content/uploads/2016/01/Artikel_Galerie_Top-10-magische-Landschaften_10.jpg);
+  background-size: cover; /* HIntergrundbild wird immer passed Beschnitten*/
+  height: 100vh; /*Höhe vom viewport - Nimmt den ganz Browser nach unten ein*/
+  display: flex; /*Grundlage für Layouts bauen, alle Elemente werden nebeneinander angeordnet (row), untereinander: column, einstellbar mit flex-direction*/
+  flex-direction: column;
+}
+
+.header:after {
+  content: '';
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header-logo {
+  text-align: center;
+  color: #fff;
+  font-family: "Century Gothic";
+  font-weight: 100;
+  position: relative;
+  z-index: 1;
+}
+
+.header-headline {
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 3px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.header-text {
+  margin: 0; /*oben kein Rand mehr */
+  color: #fff;
+  font-family: "Century Gothic";
+  font-size: 30pt;
+  font-weight: 100;
+  text-align: center;
+}
+
+.header-text:before {
+  content: '"';
+}
+
+.header-text:after {
+  content: '"';
+}
+
+.content {
+  padding: 50px;
+}
+
+.teaser {
+  display: flex;
+}
+
+.teaser-media {
+  width: 60%;
+}
+
+.teaser-media img {
+  max-width: 100%;
+}
+
+.teaser-text {
+  width: 40%;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Century Gothic";
+  font-weight: 100;
+}
+
+.teaser-text-headline {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 2px solid #000;
+    text-align: center;
+}
